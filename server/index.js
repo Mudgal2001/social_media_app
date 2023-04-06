@@ -9,6 +9,7 @@
  import path from "path";
  import { fileURLToPath } from "url";
  import authRoutes from "./routes/auth.js";
+ import userRoutes from "./routes/users.js";
  import {register} from "./controllers/auth.js"
  /* Configuation */
  const __filename = fileURLToPath(import.meta.url);
@@ -40,6 +41,7 @@
 
  //Routes
  app.use("/auth",authRoutes);
+ app.use("/user",userRoutes);
 
  // Mogoose setup
 
