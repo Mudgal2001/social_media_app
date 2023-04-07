@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lato:wght@700&family=Lora:ital,wght@1,400;1,500;1,600&family=Montserrat:wght@400;600&family=Outfit:wght@300;400;600&family=Rubik:wght@400;500;700&family=Varela&family=Varela+Round&display=swap');
+
+html,
+body,
+#root,
+.app{
+  height: 100%;
+  width:100%;
+  font-family: "Rubik", sans-serif;
+}
