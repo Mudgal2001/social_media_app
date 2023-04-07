@@ -10,7 +10,10 @@
  import { fileURLToPath } from "url";
  import authRoutes from "./routes/auth.js";
  import userRoutes from "./routes/users.js";
- import {register} from "./controllers/auth.js"
+ import postRoutes from "./routes/posts.js";
+ import {register} from "./controllers/auth.js";
+ import {createPost} from "./controllers/posts.js";
+ import { verifyToken } from "./middleware/auth.js";
  /* Configuation */
  const __filename = fileURLToPath(import.meta.url);
  const __dirname  = path.dirname(__filename);
@@ -38,10 +41,12 @@
 
  // Routes wiht Files
  app.post("auth/register",upload.single("picutre"),register);
+ app.post("/posts",verifyToken,upload.single("picutre"),createPost);
 
  //Routes
  app.use("/auth",authRoutes);
  app.use("/user",userRoutes);
+ app.use("/posts",postRoutes);
 
  // Mogoose setup
 
